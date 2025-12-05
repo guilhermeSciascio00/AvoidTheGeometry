@@ -13,6 +13,8 @@
 <ul>
   <li>
     Programming / Art: Me
+  </li>
+  <li>
     Music and SFX: https://pixabay.com/sound-effects/level-up-06-370051/ and https://pixabay.com/pt/music/m%c3%basicas-felizes-para-crian%c3%a7as-upbeat-background-loop-casual-video-game-music-249200/
   </li>
 </ul>
