@@ -1,0 +1,36 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b002q466xxf63"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sphjs"]
+bg_color = Color(0.0285, 0.09127501, 0.15, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5kd2"]
+bg_color = Color(0.12039999, 0.28035998, 0.43, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxmtg"]
+bg_color = Color(0.61060005, 0.7394567, 0.86, 1)
+shadow_color = Color(0.31490004, 0.41551167, 0.67, 1)
+shadow_size = 2
+shadow_offset = Vector2(1.6, 1.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14kg4"]
+bg_color = Color(0.45049998, 0.6569084, 0.85, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0.2277, 0.3355701, 0.69, 1)
+shadow_size = 2
+shadow_offset = Vector2(1.6, 1.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewvkp"]
+bg_color = Color(0.1848, 0.41887993, 0.77, 1)
+shadow_color = Color(0.08330001, 0.19175325, 0.49, 1)
+shadow_size = 2
+shadow_offset = Vector2(1.6, 1.5)
+
+[resource]
+Button/styles/disabled = SubResource("StyleBoxFlat_sphjs")
+Button/styles/focus = SubResource("StyleBoxFlat_p5kd2")
+Button/styles/hover = SubResource("StyleBoxFlat_oxmtg")
+Button/styles/normal = SubResource("StyleBoxFlat_14kg4")
+Button/styles/pressed = SubResource("StyleBoxFlat_ewvkp")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1sxjhf73yk6w"]
+
+[ext_resource type="PackedScene" uid="uid://3t7c0x5h45ve" path="res://Scenes/enemy.tscn" id="1_jlcpo"]
+[ext_resource type="Texture2D" uid="uid://b8hwechnic0wf" path="res://Sprites/White_Triangle.svg" id="2_7ll5d"]
+
+[node name="Enemy" instance=ExtResource("1_jlcpo")]
+
+[node name="Sprite2D" parent="." index="0"]
+self_modulate = Color(0.95, 0.73149997, 0.2945, 1)
+texture = ExtResource("2_7ll5d")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+visible = false
+position = Vector2(-1, 3)
+shape = null
+disabled = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HitBox" index="1"]
+build_mode = 1
+polygon = PackedVector2Array(26, 22, -26, 22, 0, -22)

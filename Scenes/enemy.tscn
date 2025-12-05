@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://3t7c0x5h45ve"]
+
+[ext_resource type="Script" uid="uid://dnaqimg206gm5" path="res://Scripts/enemy.gd" id="1_1f0kj"]
+[ext_resource type="Texture2D" uid="uid://c0vo2dwgjyr5c" path="res://Sprites/White_Circle.svg" id="1_hghv2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1f0kj"]
+radius = 19.026299
+
+[node name="Enemy" type="RigidBody2D"]
+collision_layer = 2
+gravity_scale = 0.0
+script = ExtResource("1_1f0kj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 0.23000002, 0.23000002, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_hghv2")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_1f0kj")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

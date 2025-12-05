@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxi7cycxivs8e"]
+
+[ext_resource type="AudioStream" uid="uid://b6rtr16v0uva" path="res://SoundsAndMusic/upbeat-background-loop-casual-video-game-music-249200.mp3" id="1_d4cqi"]
+
+[node name="GameBGMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_d4cqi")
+autoplay = true
+bus = &"Music"

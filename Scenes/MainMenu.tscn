@@ -1,0 +1,216 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgsita8hkgsao"]
+
+[ext_resource type="Script" uid="uid://ptnkfk76tnl4" path="res://Scripts/main_menu.gd" id="1_853f1"]
+[ext_resource type="FontFile" uid="uid://bd8eo6wiwrb8e" path="res://Fonts/LuckyGuy/LuckiestGuy-Regular.ttf" id="1_tt5f1"]
+[ext_resource type="Script" uid="uid://c042l4i0iqnw6" path="res://Scripts/audio_settings.gd" id="4_df05h"]
+[ext_resource type="Theme" uid="uid://b002q466xxf63" path="res://Themes/button_theme.tres" id="4_ghw46"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_853f1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6039216, 0.7176471, 0.5254902, 1)
+
+[node name="GameTitle" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -487.5
+offset_top = 22.0
+offset_right = 487.5
+offset_bottom = 149.00002
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("1_tt5f1")
+theme_override_font_sizes/normal_font_size = 98
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5][color=indigo]Avoid the Geometry[/color][/wave]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VboxButtons" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.44
+offset_top = -50.5
+offset_right = 77.44
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/VboxButtons"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("4_ghw46")
+text = "Play"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VboxButtons"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("4_ghw46")
+text = "Settings"
+
+[node name="Button3" type="Button" parent="CanvasLayer/VboxButtons"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("4_ghw46")
+text = "Quit"
+
+[node name="Settings" type="Panel" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsTitle" type="RichTextLabel" parent="CanvasLayer/Settings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49800003
+anchor_top = 0.291
+anchor_right = 0.49800003
+anchor_bottom = 0.291
+offset_left = -98.696045
+offset_top = -39.56801
+offset_right = 99.303955
+offset_bottom = 39.93199
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_tt5f1")
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "[wave]Settings[/wave]"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="VBoxContainer" parent="CanvasLayer/Settings"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.47500002
+anchor_right = 0.4
+anchor_bottom = 0.47500002
+offset_left = -99.80002
+offset_top = -33.80002
+offset_right = 100.19998
+offset_bottom = 34.19998
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MasterV" type="RichTextLabel" parent="CanvasLayer/Settings/Text"]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_tt5f1")
+text = "MasterVolume"
+vertical_alignment = 2
+
+[node name="MusicV" type="RichTextLabel" parent="CanvasLayer/Settings/Text"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_tt5f1")
+text = "MusicVolume"
+vertical_alignment = 2
+
+[node name="SFXV" type="RichTextLabel" parent="CanvasLayer/Settings/Text"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_tt5f1")
+text = "SFXVolume"
+vertical_alignment = 2
+
+[node name="Sliders" type="VBoxContainer" parent="CanvasLayer/Settings"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.47500002
+anchor_right = 0.4
+anchor_bottom = 0.47500002
+offset_left = 38.19998
+offset_top = -33.80002
+offset_right = 238.19998
+offset_bottom = 41.19998
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MasterV_Slider" type="HSlider" parent="CanvasLayer/Settings/Sliders"]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="MusicV_Slider" type="HSlider" parent="CanvasLayer/Settings/Sliders"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="SFXV_Slider" type="HSlider" parent="CanvasLayer/Settings/Sliders"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="BackBtn" type="Button" parent="CanvasLayer/Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.0
+offset_top = 39.0
+offset_right = 61.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_ghw46")
+text = "Go Back"
+
+[node name="HighScore" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -108.0
+offset_right = 176.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/default_color = Color(0.98333335, 1, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_tt5f1")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[wave]HighScore : 999[/wave]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioSettings" type="Node" parent="."]
+script = ExtResource("4_df05h")
+
+[connection signal="pressed" from="CanvasLayer/VboxButtons/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VboxButtons/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/VboxButtons/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="value_changed" from="CanvasLayer/Settings/Sliders/MasterV_Slider" to="AudioSettings" method="_on_master_v_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Settings/Sliders/MusicV_Slider" to="AudioSettings" method="_on_music_v_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Settings/Sliders/SFXV_Slider" to="AudioSettings" method="_on_sfxv_slider_value_changed"]
+[connection signal="pressed" from="CanvasLayer/Settings/BackBtn" to="." method="_on_back_btn_pressed"]
