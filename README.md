@@ -1,6 +1,8 @@
 <h1>Avoid The Geometry</h1>
+<img width="484" height="484" alt="index icon" src="https://github.com/user-attachments/assets/23a67a91-14c8-465a-9faa-ded76bfd455f" />
 <p> Avoid the geometry is a 2D top down game, where your main goal is to dodge the enemies as long as you can.</p>
 <p> You can download the game in the AvoidTheGeometryGame folder</p>
+<p> You can also play it in the browser <a href="https://gszy.itch.io/avoid-the-geometry"> Avoid The Geometry By GsZY</a></p>
 <h2> Controls </h2>
 <p> To move around is really simple, just move your mouse 🖱️ and the player will follow it</p>
 <h2> How to Play </h2>
